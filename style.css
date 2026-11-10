@@ -1,0 +1,80 @@
+:root {
+  --brand: #2f5d8a;
+  --brand-dark: #244a6f;
+  --brand-light: #4a7fb5;
+  --bs-link-color-rgb: 47, 93, 138;
+  --bs-link-hover-color-rgb: 192, 57, 43;
+}
+
+body {
+  background-color: #eef2f7;
+}
+
+.site-header,
+.site-footer {
+  background-color: var(--brand);
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+}
+
+.menu {
+  background-color: var(--brand-dark);
+}
+
+.menu-link {
+  color: #fff;
+  background-color: var(--brand-light);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--brand);
+  background-color: #fff;
+}
+
+.page-title,
+.block-title {
+  color: var(--brand);
+}
+
+.schedule-table {
+  min-width: 560px;
+  --bs-table-striped-bg: #dde8f4;
+}
+
+.schedule-table thead th {
+  --bs-table-bg: var(--brand);
+  --bs-table-color: #fff;
+}
+
+.validated:not(:placeholder-shown):invalid {
+  border-color: var(--bs-form-invalid-border-color);
+  background-color: #fdecea;
+}
+
+.validated:not(:placeholder-shown):valid {
+  border-color: var(--bs-form-valid-border-color);
+  background-color: #eefaf2;
+}
+
+.validated:not(:placeholder-shown):invalid + .form-text {
+  color: var(--bs-form-invalid-color);
+  font-weight: 700;
+}
+
+.btn-brand {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--brand-dark);
+  --bs-btn-hover-border-color: var(--brand-dark);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--brand-dark);
+  --bs-btn-active-border-color: var(--brand-dark);
+  --bs-btn-focus-shadow-rgb: 74, 127, 181;
+}
