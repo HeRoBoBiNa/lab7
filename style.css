@@ -78,3 +78,62 @@ body {
   --bs-btn-active-border-color: var(--brand-dark);
   --bs-btn-focus-shadow-rgb: 74, 127, 181;
 }
+
+/* Самостоятельные стили вместо Bootstrap: сторонние библиотеки не используются. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #253247; line-height: 1.5; }
+a { color: var(--brand); }
+a:hover { color: #c0392b; }
+.container { width: min(100% - 32px, 1140px); margin-inline: auto; }
+.d-flex { display: flex; } .flex-column { flex-direction: column; } .flex-grow-1 { flex-grow: 1; } .min-vh-100 { min-height: 100vh; }
+.text-white { color: #fff; } .py-3 { padding-block: 16px; } .py-md-4 { padding-block: 24px; }
+.row { display: flex; flex-wrap: wrap; margin: -8px; } .row > * { padding: 8px; }
+.col-auto { flex: 0 0 auto; } .col { flex: 1 1 180px; } .col-12 { flex: 0 0 100%; max-width: 100%; }
+.align-items-center { align-items: center; } .align-self-md-end { align-self: end; } .align-self-md-start { align-self: start; }
+.fs-3 { font-size: 1.65rem; } .fs-5 { font-size: 1.2rem; } .fw-bold { font-weight: 700; }
+.mb-0 { margin-bottom: 0; } .mb-2 { margin-bottom: 8px; } .mb-3 { margin-bottom: 16px; } .mb-md-4 { margin-bottom: 24px; }
+.p-1 { padding: 4px; } .p-3 { padding: 16px; } .p-md-4 { padding: 24px; } .px-0 { padding-inline: 0; } .px-3 { padding-inline: 12px; } .px-4 { padding-inline: 16px; } .py-2 { padding-block: 8px; } .pb-2 { padding-bottom: 8px; }
+.rounded { border-radius: 8px; } .rounded-circle { border-radius: 50%; } .border { border-style: solid; } .border-3 { border-width: 3px; } .border-white { border-color: white; } .border-bottom { border-bottom: 1px solid #d8e0e8; }
+.nav { list-style: none; display: flex; padding-left: 0; margin: 0; } .menu { gap: 4px; } .nav-link { display: block; text-decoration: none; } .menu-link { color: white; }
+.card { background: #fff; border: 1px solid #d7e0e9; border-radius: 10px; box-shadow: 0 3px 12px #1a385414; } .h-100 { height: 100%; }
+.list-group { list-style: none; padding: 0; margin: 0; } .list-group-item { padding-block: 9px; border-bottom: 1px solid #e5eaf0; } .list-group-item:last-child { border: 0; }
+.table-responsive { overflow-x: auto; } .table { border-collapse: collapse; width: 100%; } .table caption { text-align: left; } .table th, .table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; } .table thead th { background: var(--brand); color: #fff; } .table tbody tr:nth-child(even) { background: #dde8f4; } .table-warning { background: #fff1c2; } .text-nowrap { white-space: nowrap; } .text-body { color: #253247; } .pt-0 { padding-top: 0; }
+.form-label { display: block; margin-bottom: 6px; } .form-control, .form-select { display: block; width: 100%; min-height: 42px; padding: 9px 12px; border: 1px solid #aebdce; border-radius: 6px; background: white; font: inherit; color: inherit; } textarea.form-control { min-height: 115px; resize: vertical; } .form-control:focus, .form-select:focus { outline: 2px solid #7aafd8; outline-offset: 1px; }
+.form-text { font-size: .86rem; color: #586879; margin-top: 4px; } .form-check { display: flex; gap: 8px; align-items: center; }
+.btn { cursor: pointer; border-radius: 6px; padding: 9px 15px; font: inherit; border: 1px solid transparent; } .btn-brand { background: var(--brand); color: white; } .btn-brand:hover { background: var(--brand-dark); } .btn-outline-secondary { border-color: #77889a; color: #4c5b69; background: white; } .btn-outline-secondary:hover { background: #e5eaf0; }
+.d-grid { display: grid; } .gap-2 { gap: 8px; } .order-1 { order: 1; } .order-2 { order: 2; } .order-3 { order: 3; }
+.validated:not(:placeholder-shown):invalid { border-color: #dc3545; background: #fdecea; } .validated:not(:placeholder-shown):valid { border-color: #198754; background: #eefaf2; } .validated:not(:placeholder-shown):invalid + .form-text { color: #b42332; font-weight: 700; }
+.error-message { margin: 8px 0 0; color: #b42332; font-weight: 600; } .error-message[hidden], .order-result[hidden] { display: none; }
+.order-result { padding: 14px 16px; margin: 0; border-radius: 8px; background: #e6f2fc; border: 1px solid #a7c9e5; color: #214d70; font-weight: 700; }
+@media (min-width: 768px) { .flex-md-row { flex-direction: row; } .col-md-6 { flex: 0 0 50%; max-width: 50%; } .d-md-flex { display: flex; } }
+@media (min-width: 992px) { .col-lg-4 { flex: 0 0 33.333%; max-width: 33.333%; } }
+@media (min-width: 1200px) { .col-xl-4 { flex: 0 0 33.333%; max-width: 33.333%; } .col-xl-8 { flex: 0 0 66.667%; max-width: 66.667%; } }
+@media (min-width: 768px) { .order-md-1 { order: 1; } .order-md-2 { order: 2; } }
+@media (max-width: 767px) { .site-header .row { align-items: center; } .site-header nav { flex-basis: 100%; } .nav { flex-direction: column; } }
+
+/* Лабораторная №6: динамический калькулятор услуг */
+.service-fieldset { margin: 0; border: 0; min-width: 0; }
+.service-fieldset legend { padding: 0; }
+.service-radio { display: flex; align-items: center; gap: 9px; margin: 0 0 10px; cursor: pointer; }
+.service-radio input { accent-color: var(--brand); width: 17px; height: 17px; flex-shrink: 0; }
+[hidden] { display: none !important; }
+
+/* Лабораторная №7: горизонтальная галерея */
+.gallery-controls { display: flex; align-items: center; gap: 10px; }
+.gallery-window { overflow: hidden; flex: 1; min-width: 0; }
+.gallery-track { --visible: 3; display: flex; list-style: none; padding: 0; margin: 0; transition: transform .35s ease; }
+.gallery-slide { flex: 0 0 calc(100% / var(--visible)); min-width: 0; padding: 0 7px; }
+.gallery-slide img { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; border-radius: 9px; }
+.gallery-caption { display: block; text-align: center; font-weight: 600; padding-top: 8px; }
+.gallery-arrow { border: 0; border-radius: 50%; background: var(--brand); color: #fff; font-size: 26px; width: 42px; height: 42px; flex: 0 0 42px; cursor: pointer; }
+.gallery-arrow:hover:not(:disabled) { background: var(--brand-dark); }
+.gallery-arrow:disabled { opacity: .35; cursor: not-allowed; }
+.gallery-arrow:focus-visible { outline: 3px solid #e4a33e; outline-offset: 3px; }
+.gallery-pager { text-align: center; font-weight: 700; color: var(--brand); margin: 16px 0 0; }
+@media (max-width: 767px) { .gallery-track { --visible: 1; } .gallery-controls { gap: 3px; } .gallery-slide { padding: 0 3px; } .gallery-arrow { width: 34px; height: 34px; flex-basis: 34px; font-size: 21px; } }
+@media (prefers-reduced-motion: reduce) { .gallery-track { transition: none; } }
+
+/* Лабораторная №7: карточки рейтинга собак */
+.gallery-slide img { background: #f3e7dc; }
+.gallery-caption { font-size: 1.15rem; font-weight: 800; }
